@@ -1,0 +1,85 @@
+Feb-19 10:58:49.323 [main] DEBUG nextflow.cli.Launcher - $> nextflow distiller.nf -params-file TCC.yml
+Feb-19 10:58:49.392 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 20.01.0
+Feb-19 10:58:49.401 [main] INFO  nextflow.cli.CmdRun - Launching `distiller.nf` [evil_cori] - revision: 4b2ff8d377
+Feb-19 10:58:49.480 [main] DEBUG nextflow.Session - Session uuid: 96cf91d4-be19-44fe-bb21-d625779c46b4
+Feb-19 10:58:49.480 [main] DEBUG nextflow.Session - Run name: evil_cori
+Feb-19 10:58:49.481 [main] DEBUG nextflow.Session - Executor pool size: 12
+Feb-19 10:58:49.488 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 20.01.0 build 5264
+  Created: 12-02-2020 10:14 UTC (05:14 EDT)
+  System: Linux 4.15.0-88-generic
+  Runtime: Groovy 2.5.8 on OpenJDK 64-Bit Server VM 1.8.0_242-8u242-b08-0ubuntu3~16.04-b08
+  Encoding: UTF-8 (UTF-8)
+  Process: 26320@mozart [127.0.1.1]
+  CPUs: 12 - Mem: 15.5 GB (3.4 GB) - Swap: 31.7 GB (31.5 GB)
+Feb-19 10:58:49.523 [main] DEBUG nextflow.Session - Work-dir: /home/fangyuan/projects/hic/codes/work [ext2/ext3]
+Feb-19 10:58:49.524 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/fangyuan/projects/hic/codes/bin
+Feb-19 10:58:49.536 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Feb-19 10:58:49.537 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Feb-19 10:58:49.626 [main] DEBUG nextflow.Session - Session start invoked
+Feb-19 10:58:50.275 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Feb-19 10:58:50.280 [main] DEBUG nextflow.Session - Workflow process names [dsl1]: merge_zoom_library_group_coolers, merge_dedup_splitbam, fastqc, bin_zoom_library_pairs, local_truncate_chunk_fastqs, download_truncate_chunk_fastqs, map_parse_sort_chunks, merge_stats_libraries_into_groups
+Feb-19 10:58:50.282 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `compression_format` -- Initialise it to a default value eg. `params.compression_format = some_value`
+Feb-19 10:58:50.396 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-19 10:58:50.396 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-19 10:58:50.399 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Feb-19 10:58:50.402 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=12; memory=15.5 GB; capacity=12; pollInterval=100ms; dumpInterval=5m
+Feb-19 10:58:50.440 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > download_truncate_chunk_fastqs -- maxForks: 12; blocking: false
+Feb-19 10:58:50.453 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-19 10:58:50.454 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-19 10:58:50.454 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > local_truncate_chunk_fastqs -- maxForks: 12; blocking: false
+Feb-19 10:58:50.473 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-19 10:58:50.473 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-19 10:58:50.474 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > fastqc -- maxForks: 12; blocking: false
+Feb-19 10:58:50.485 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-19 10:58:50.485 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-19 10:58:50.486 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > map_parse_sort_chunks -- maxForks: 12; blocking: false
+Feb-19 10:58:50.495 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-19 10:58:50.495 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-19 10:58:50.496 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > merge_dedup_splitbam -- maxForks: 12; blocking: false
+Feb-19 10:58:50.505 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-19 10:58:50.505 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-19 10:58:50.506 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > bin_zoom_library_pairs -- maxForks: 12; blocking: false
+Feb-19 10:58:50.513 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-19 10:58:50.513 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-19 10:58:50.515 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > merge_zoom_library_group_coolers -- maxForks: 12; blocking: false
+Feb-19 10:58:50.519 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-19 10:58:50.519 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-19 10:58:50.520 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > merge_stats_libraries_into_groups -- maxForks: 12; blocking: false
+Feb-19 10:58:50.521 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Feb-19 10:58:50.521 [main] DEBUG nextflow.Session - Session await
+Feb-19 10:58:50.561 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-19 10:58:50.564 [Task submitter] INFO  nextflow.Session - [95/6b83c0] Submitted process > map_parse_sort_chunks (library:SRR6493702 run:lane1 chunk:0)
+Feb-19 10:58:50.585 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: map_parse_sort_chunks (library:SRR6493702 run:lane1 chunk:0); status: COMPLETED; exit: 1; error: -; workDir: /home/fangyuan/projects/hic/codes/work/95/6b83c0339e7e729f2ee574ec067dd4]
+Feb-19 10:58:50.599 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'map_parse_sort_chunks (library:SRR6493702 run:lane1 chunk:0)'
+
+Caused by:
+  Process `map_parse_sort_chunks (library:SRR6493702 run:lane1 chunk:0)` terminated with an error exit status (1)
+
+Command executed:
+
+  TASK_TMP_DIR=$(mktemp -d -p null distiller.tmp.XXXXXXXXXX)
+  touch SRR6493702.lane1.GRCh38.0.bam 
+  bwa mem -t 1 -v 3 -SP Homo_sapiens.GRCh38.dna.primary_assembly.fa SRR6493702_1.fastq.gz SRR6493702_2.fastq.gz         | tee >(samtools view -bS > SRR6493702.lane1.GRCh38.0.bam)         | pairtools parse                --add-columns mapq             -c hg38.chrom.sizes             | pairtools sort --nproc 1                              -o SRR6493702.lane1.GRCh38.0.pairsam.gz                              --tmpdir $TASK_TMP_DIR             | cat
+  
+  rm -rf $TASK_TMP_DIR
+
+Command exit status:
+  1
+
+Command output:
+  (empty)
+
+Command error:
+  mktemp: failed to create directory via template ‘null/distiller.tmp.XXXXXXXXXX’: No such file or directory
+
+Work dir:
+  /home/fangyuan/projects/hic/codes/work/95/6b83c0339e7e729f2ee574ec067dd4
+
+Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`
+Feb-19 10:58:50.603 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `map_parse_sort_chunks (library:SRR6493702 run:lane1 chunk:0)` terminated with an error exit status (1)
+Feb-19 10:58:50.604 [main] DEBUG nextflow.Session - Session await > all process finished
+Feb-19 10:58:50.614 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Feb-19 10:58:50.619 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=1ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Feb-19 10:58:50.828 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Feb-19 10:58:50.835 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

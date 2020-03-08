@@ -1,0 +1,2 @@
+2020-02-19 10:57:07	1.6s	festering_joliot	ERR	4b2ff8d37700352ba88a9798f5b9957b	bfdef617-3e82-48fc-b766-532ac566858d	nextflow distiller.nf -params-file TCC.yml
+2020-02-19 10:58:49	1.8s	evil_cori	ERR	4b2ff8d37700352ba88a9798f5b9957b	96cf91d4-be19-44fe-bb21-d625779c46b4	nextflow distiller.nf -params-file TCC.yml
